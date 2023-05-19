@@ -6,7 +6,7 @@ const {
   deleteThought,
   addReaction,
   removeReaction,
-} = require('../../controllers/userController');
+} = require('../../controllers/thoughtController');
 
 // /api/users
 router.route('/').get(getThoughts).post(createThought);

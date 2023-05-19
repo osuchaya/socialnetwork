@@ -8,7 +8,7 @@ const userSchema = new Schema(
       type: String,
       unique: true,
       required: true,
-      trim: true
+      trim: true,
     },
     email: {
       type: String,
@@ -28,8 +28,8 @@ const userSchema = new Schema(
           ref: 'User',
         },
       ],
-
-  
+    },
+  {
     toJSON: {
       virtuals: true,
     },
