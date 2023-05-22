@@ -1,4 +1,5 @@
 const { User, Thought } = require("../models");
+const { ObjectId } = require('mongoose').Types;
 
 module.exports = {
   // Get all thoughts
@@ -14,7 +15,7 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: "No thought with that ID" })
-          : res.json(course)
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
@@ -45,10 +46,10 @@ module.exports = {
       { $set: req.body },
       { runValidators: true, new: true }
     )
-      .then((course) =>
-        !course
-          ? res.status(404).json({ message: "No course with this id!" })
-          : res.json(course)
+      .then((thought) =>
+        !thought
+          ? res.status(404).json({ message: "No thought with this id!" })
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
