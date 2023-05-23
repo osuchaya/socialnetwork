@@ -14,7 +14,7 @@ No starter code was given for this project. The project was built from scratch.
 | Day.js library | [https://day.js.org] | (https://day.js.org)  
 
 ## Description 
-Since this is a back-end application, please visit the walkthrough video at []()
+Since this is a back-end application, please visit the walkthrough video at [https://drive.google.com/file/d/1eCgKL1gk2-IW8e7QCzLBdCFl3DQ8mfmb/view](https://drive.google.com/file/d/1eCgKL1gk2-IW8e7QCzLBdCFl3DQ8mfmb/view)
 This project is part of Module 18 NoSQL where MongoDB was used as database whose advantage is its speed and ability to handle large amounts of data and allowing flexibility for unstructured data. This project is to build an API for a social network web application employing Express.js for routing, MongoDB for database and Mongoose as the Object Document Modeller (ODM). As it is an application that needs timestamp, day.js library was employed to generate and deliver this.
 
 ## Installation and Usage
