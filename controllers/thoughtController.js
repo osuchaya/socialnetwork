@@ -74,12 +74,15 @@ module.exports = {
   },
 
   removeReaction(req, res) {
+    console.log('req.params.thoughtId= ', req.params.thoughtId);
+    console.log('req.params.reactionId= ', req.params.reactionId);
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: { _id: req.params.reactionId } } },
+      { $pull: { reactions: { reactionId: req.params.reactionId } } },
       { runValidators: true, new: true }
     )
       .then((dbThoughtData) => {
+        console.log('dbThoughtData=', dbThoughtData);
         if (!dbThoughtData) {
           return res.status(404).json({ message: "No thought with this id!" });
         }
